@@ -4,23 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./pages/index.css"> -->
     <link rel="stylesheet" href="./pages/index.css">
     <title>Тренеровочный проект Гит</title>
 </head>
 
-<body>
-    <div class="page">
+<body class="page">
+    <div class="page__content">
         <header class="header">
             <img class="logo logo_place_header" src="./images/logo_place_header.svg" alt="лого Яндекс Практикум">
-
             <h1 class="header__title">Тренеровочный проект Гит </h1>
             <p class="header__subtitle">Какие современные и эффективные подходы к обучению вы можете использовать в
                 своей
                 жизни?<a class="header__link" href="#" target="_blank"> Узнать &rarr;</a></p>
-            <img class="header__main-illustration" src="./images/header-image.png" alt="картина Опять двойка">
+            <!-- <img class="header__main-illustration" src="./images/header-image.png" alt="картина Опять двойка"> -->
             <div class="header__square-pic rotation"></div>
         </header>
+        <!-- fragment from Mesto project -->
+        <!-- profile section -->
+        <section id="profile" class="profile content__section">
+            <!--flex-->
+            <img class="profile__avatar" src="./images/avatar.png" alt="бюст улыбающегося человека в красной шапке">
+            <div class="profile__elements-wrap">
+                <div class="profile__name-wrap">
+                    <h1 class="profile__name">Жак-Ив Кусто</h1>
+                    <button type="button" aria-label="edit" class="btn profile__btn-edit"></button>
+                </div>
+                <p class="profile__job">Исследователь океана</p>
+            </div>
+            <button type="button" class="btn profile__btn-add"></button>
+        </section>
 
+
+
+        <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+        <!-- /// POPUP /// -->
+        <div class="popup">
+            <!-- flex -->
+            <div class="popup__container">
+                <h2 class="popup__title">Редактировать профиль</h2>
+                <form class="popup__form" name="form" action="#">
+                    <input class="popup__input popup__input_type_name" name="name" type="text"
+                        placeholder="Жак-Ив Кусто" required>
+                    <input class="popup__input popup__input_type_job" name="job" type="text"
+                        placeholder="Исследователь океана" required>
+                    <button type="submit" class="btn popup__btn-save">Сохранить</button>
+                </form>
+                <button type="button" aria-label="close" class="popup__btn-close"></button>
+            </div>
+        </div>
+
+
+
+        <!-- SCRIPT -->
+        <script src="./script.js"></script>
+
+        <div id="elem">Мигающий элемент</div>
+
+        <script>
+            setInterval(() => elem.hidden = !elem.hidden, 1000);
+        </script>
+
+    </div>
 </body>
 
 </html>
